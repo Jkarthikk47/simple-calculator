@@ -11,11 +11,12 @@ git branch feature-branch
 git checkout feature-branch
 git add .
 git commit -m "message"
-git push origin feature-branch:main
+git checkout master
+git merge/merge feature-branch
 
 git add .
-git commit -m "message"
 git stash
+git checkout master
 git checkout feature-branch
 git stash apply
 
@@ -23,30 +24,23 @@ EXPERIMENT 3
 git clone repolink
 git branch -v
 git checkout -b feature-branch
-git branch -v
 git rebase origin 
 git add .
 git commit -m "message"
 git rebase origin
 
 EXPERIMENT 4
-git add .
-git commit -m "message"
-git push
-git log  —oneline 
+git log
 git tag  v1.0 (commit id) 
-git tag
-git push origin v1.0
+git show v1.0
 
 EXPERIMENT 5
+git status
 git log --oneline 
-git status 
 git checkout feature-branch 
-git cherry-pick id
+git cherry-pick <hash>
 
 EXPERIMENT 6
-git log --oneline 
-git show (commit id)
-//open new terminal //
-git log --author=" " --after="(//yesterday date//) "    --before="(//tmr date//)"
+git show <commit_id>
+git log --author=" jd" --after="(//yesterday date//) "    --before="(//tmr date//)"
 git log -n 5
